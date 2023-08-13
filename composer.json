@@ -1,0 +1,21 @@
+{
+  "name": "otolaa/local.xml",
+  "description": "bitrix favorites module",
+  "type": "bitrix-module",
+  "keywords": [
+    "bitrix",
+    "xml"
+  ],
+  "authors": [
+    {
+      "name": "Alex Noodles",
+      "email": "kalabunga82@gmail.com",
+      "role": "Author"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=8.0",
+    "composer/installers": "~1"
+  }
+}
