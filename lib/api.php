@@ -11,12 +11,12 @@ use \Bitrix\Main\Application;
  */
 class Api
 {
-    var $MODULE_ID = "local.xml";
-    var $IBLOCK_ID_ARR;
-    var $f_patch = "/bitrix/catalog_export/local_xls_export.xml";
-    var $teg_name;
-    var $teg_company;
-    var $teg_url;
+    public $MODULE_ID = "local.xml";
+    public $IBLOCK_ID_ARR;
+    public $f_patch = "/bitrix/catalog_export/local_xls_export.xml";
+    public $teg_name;
+    public $teg_company;
+    public $teg_url;
 
     public function __construct()
     {
