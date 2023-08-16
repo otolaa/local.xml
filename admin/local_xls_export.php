@@ -72,7 +72,7 @@ if ($_REQUEST['process'] == "Y") {
     // если выполняется условие, то тогда ++
     if (true === true) {
         // $NS['queue'] - очередь количество элементов
-        $arSelect = ["ID", "NAME", "CODE", "IBLOCK_ID", "IBLOCK_SECTION_ID", "DETAIL_PICTURE", "CATALOG_PRICE_1", "DETAIL_TEXT"];
+        $arSelect = ["ID", "NAME", "CODE", "IBLOCK_ID", "IBLOCK_SECTION_ID", "DETAIL_PICTURE", "PRICE_1", "CURRENCY_1", "DETAIL_TEXT"];
         $arFilter = ["IBLOCK_ID"=>$IBLOCK_ID_ARR, "ACTIVE"=>"Y"];
         $rsData = CIBlockElement::GetList(['id'=>'acs'], $arFilter, false, ["nPageSize"=>$NS['queue'], "iNumPage"=>$NS["step"]], $arSelect);
 
@@ -82,8 +82,8 @@ if ($_REQUEST['process'] == "Y") {
         while ($rows = $rsData->GetNext()) {
             $offer .= '<offer><id>'.$rows['ID'].'</id><categoryId>'.$rows['IBLOCK_SECTION_ID'].'</categoryId><name>'.$rows['NAME'].'</name>                  
                         '.($rows['DETAIL_PICTURE']?'<picture>'.$xml->teg_url.CFile::GetPath($rows['DETAIL_PICTURE']).'</picture>':'').'
-                        <currencyId>'.$rows['CATALOG_CURRENCY_1'].'</currencyId>
-                        <price>'.number_format($rows['CATALOG_PRICE_1'], 0, '.', '').'</price>
+                        <currencyId>'.$rows['CURRENCY_1'].'</currencyId>
+                        <price>'.number_format($rows['PRICE_1'], 0, '.', '').'</price>
                         <description>'.$xml->cleanText($rows['~DETAIL_TEXT']).'</description></offer>';
         }
 
