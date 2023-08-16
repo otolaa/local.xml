@@ -13,7 +13,7 @@ class Api
 {
     public $MODULE_ID = "local.xml";
     public $IBLOCK_ID_ARR;
-    public $f_patch = "/bitrix/catalog_export/local_xls_export.xml";
+    public $f_patch;
     public $teg_name;
     public $teg_company;
     public $teg_url;
@@ -23,6 +23,7 @@ class Api
         $this->teg_name = Option::get("local.xml", "LXML_TEG_NAME");
         $this->teg_company = Option::get("local.xml", "LXML_TEG_COMPANY");
         $this->teg_url = Option::get("local.xml", "LXML_TEG_URL");
+        $this->f_patch = Option::get("local.xml", "LXML_F_PATCH");
 
         $IBLOCK_ARR = [];
         foreach (explode(',', Option::get("local.xml", "LXML_IBLOCK_ID")) as $id)

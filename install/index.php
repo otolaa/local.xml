@@ -53,6 +53,7 @@ Class local_xml extends CModule
         Option::set($this->MODULE_ID, 'LXML_TEG_NAME', 'Одежда');
         Option::set($this->MODULE_ID, 'LXML_TEG_COMPANY', 'Инет-магазин Одежда');
         Option::set($this->MODULE_ID, 'LXML_TEG_URL', 'http://127.0.0.3');
+        Option::set($this->MODULE_ID, 'LXML_F_PATCH', '/bitrix/catalog_export/local_xls_export.xml');
         $APPLICATION->IncludeAdminFile("Установка модуля ".$this->MODULE_ID, $this->getPageLocal('step.php'));
         return true;
     }

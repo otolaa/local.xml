@@ -22,6 +22,8 @@ $aTabs = [
             ["LXML_TEG_NAME", "name", null, ["text",50]],
             ["LXML_TEG_COMPANY", "company", null, ["text",50]],
             ["LXML_TEG_URL", "url", null, ["text",50]],
+            "Имя xml, путь до файла",
+            ["LXML_F_PATCH", "Файл xml", null, ["text",50]],
         ]
     ],
     [

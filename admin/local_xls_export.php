@@ -144,7 +144,7 @@ if(count($arError)>0)
 $aMenu = [
     [
         "TEXT"	=> 'Файл xml экспорта',
-        "LINK"	=> "../catalog_export/local_xls_export.xml",
+        "LINK"	=> "../..".$xml->f_patch,
         "TITLE"	=> '',
         "ICON"	=> "btn_list"
     ]
